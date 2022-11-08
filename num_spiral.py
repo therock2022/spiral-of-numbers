@@ -7,25 +7,25 @@ for i in range(n):  # filling first string
 j = 0 # last filled string
 i = n-1
 n -= 1  # set size 1 block 1 cicle
-while len(matrix)**2 != count:  # условие выхода из цикла
-    for k in range(n):  # movemend downward
+while len(matrix)**2 != count:  # condition ofquit cicle
+    for k in range(n):  # movement downward
         j += 1
         count += 1
-        matrix[j][i] = count  # заполнение матрицы
-    for k in range(n):  # движение влево
+        matrix[j][i] = count  # filling matrix
+    for k in range(n):  # movement left
         i -= 1
         count += 1
         matrix[j][i] = count
-    for k in range(n-1):  # движение вверх
+    for k in range(n-1):  # movement upward
         j -= 1
         count += 1
         matrix[j][i] = count
-    for k in range(n-1):  # движение вправо
+    for k in range(n-1):  # movement right
         i += 1
         count += 1
         matrix[j][i] = count
-    n -= 2  # обеспечиваем переход на внутренний виток
-for i in range(len(matrix)):  # вывод полученной матрицы
+    n -= 2  
+for i in range(len(matrix)):  # output of full matrix
     for j in range(len(matrix[i])):
         print(matrix[i][j], end=' ')
     print()
