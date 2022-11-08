@@ -1,14 +1,14 @@
-n = int(input()) #размер матрицы
-matrix = [[0] * n for i in range(n)] #создание матрицы нужного размера, заполнена 0
-count = 0 #количество заполненых ячеек
-for i in range(n):  # заполнение первой строки
+n = int(input()) # matrix size
+matrix = [[0] * n for i in range(n)] #build matrix, exist 0
+count = 0 #number of full cells
+for i in range(n):  # filling first string
     count += 1
     matrix[0][i] = count
-j = 0 # последняя заполненая ячейка
+j = 0 # last filled string
 i = n-1
-n -= 1  # устанавливаем размер 1 блока 1 витка
+n -= 1  # set size 1 block 1 cicle
 while len(matrix)**2 != count:  # условие выхода из цикла
-    for k in range(n):  # движение вниз
+    for k in range(n):  # movemend downward
         j += 1
         count += 1
         matrix[j][i] = count  # заполнение матрицы
